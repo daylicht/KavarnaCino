@@ -1,8 +1,10 @@
+
 :root {
     --clr-primary: #8c5b3e;
     --clr-dark: #593e2e;
     --clr-accent: #555934;
     --clr-light: #f2e6d8;
+    --clr-accent-light: #b58a6a;
 }
 
 * {
@@ -131,6 +133,7 @@ nav ul li a:hover {
 .menu-list li {
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .list-name {
@@ -199,6 +202,7 @@ form button:hover {
 .whereabouts {
     width: 50%;
     padding: 2rem;
+    position: relative;
 }
 
 .whereabouts h3 {
@@ -206,4 +210,116 @@ form button:hover {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 1rem;
+}
+
+footer {
+    background: var(--clr-dark);
+    text-align: center;
+    padding-block: 10px;
+    color: var(--clr-light);
+}
+
+.whereabouts p a {
+    color: var(--clr-light);
+    text-decoration: underline;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.faq {
+    background: var(--clr-light);
+    position: relative;
+}
+
+.faq::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--clr-dark);
+    width: 75%;
+    height: 2px;
+}
+
+.faq > * {
+    text-align: center;
+    color: var(--clr-light);
+}
+
+.faq ol {
+    margin-top: 1rem;
+}
+
+.faq ol li {
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: .5rem;
+}
+
+.faq .container {
+    padding-block: 4rem;
+}
+
+.questions-wrap {
+    background: var(--clr-accent);
+    padding-block: 4rem;
+    width: fit-content;
+    margin-inline: auto;
+    padding-inline: 8rem;
+}
+
+.question-unit {
+    border-bottom: 1px solid var(--clr-light);
+    padding-block: 1rem;
+}
+
+.question {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.answer {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.opening-hours {
+    background: var(--clr-light);
+    padding-block: 4rem;
+}
+
+.opening-table {
+    background: var(--clr-dark);
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.opening-table table {
+    border-collapse: collapse;
+}
+
+.opening-table th, .opening-table td {
+    padding: 1rem 4rem;
+    color: var(--clr-light);
+}
+
+.opening-table th {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.opening-table td {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.opening-table tr > *:not(:first-child) {
+    border-left: 1px solid var(--clr-light);
+    text-align: right;
+}
+
+.opening-table tr:not(:last-child) > * {
+    border-bottom: 1px solid var(--clr-light);
 }
